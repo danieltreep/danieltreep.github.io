@@ -1,0 +1,410 @@
+* {
+    box-sizing: border-box;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(51, 51, 51) 0%, rgba(51, 51, 51, 0.993) 40%, rgba(74, 74, 74, 0.801) 100%);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    
+}
+header::after {
+    content: url(../images/pattern.png);
+    position: absolute;
+    opacity: 65%;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+nav {
+    display: flex;
+    align-self: center;
+    padding: .5rem 0 1rem;
+    font-size: .8rem;
+}
+nav a {
+    text-decoration: none;
+    padding: 0 1rem;
+    opacity: 80%;
+}
+nav a:hover,
+h1,
+h2 {
+    color: #fcf0c4;
+    opacity: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+nav {
+    font-family: 'Spectral SC', serif;
+}
+h1 {
+    font-size: 2.6rem;
+    margin: .8rem 0;
+    font-weight: 300;
+}
+h2 {
+    margin-left: 3rem;
+}
+h2, 
+h3 {
+    font-weight: normal;
+}
+.intro,
+h3 {
+    text-align: center;
+}
+p {
+    font-family: 'Sunflower', sans-serif;
+}
+.intro p {
+    font-size: 1.2rem;
+    padding: 0 2rem;
+    letter-spacing: 1px;
+}
+h3 {
+    margin: 1rem;
+    padding: 1rem .5rem 0;
+    font-size: 1rem;
+    position: relative;
+}
+h3::after {
+    content: "";
+    position: absolute;
+    height: 8rem;
+    border-left: 1px solid #FFF4CC;
+    left: -1px;
+}
+.down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.svg-down {
+    align-self: center;
+    height: 30px;
+    width: 70%;
+    border-radius: 15px;
+    background: rgba(77, 77, 77, 0.603);
+    transition: .3s;
+}
+.svg-down:hover {
+    background: rgb(97, 97, 97);
+    cursor: pointer;
+}
+
+/* Main styling */
+body {
+    background-color: #4A4A4A;
+}
+main {
+    background: rgb(68, 68, 68);
+}
+img{
+    width: 100%;
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.712);
+    transition: .5s;
+}
+.project img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+#projects {
+    margin-top: 0;
+    padding-top: 1rem;
+}
+.project {
+    padding: 2rem;
+}
+h4 {
+    letter-spacing: 3px;
+    margin: 1rem 0 .5rem;
+    font-size: 1rem;
+    color: #ffe0d2;
+    font-weight: normal;
+}
+.project p {
+    margin: 0;
+}
+.photo-link {
+    height: 25px;
+    float: right;
+    margin: 0;
+}
+.about {
+    background: linear-gradient(180deg, rgb(51, 51, 51) 0%, rgba(74, 74, 74, 0.801) 100%);
+    padding-bottom: 2rem;
+}
+.about h2 {
+    padding: 1rem 1rem 0;
+    margin: 0 2rem 1rem 0;
+    text-align: right;
+    position: relative;
+}
+.about h2::after {
+    content: "";
+    position: absolute;
+    height: 5rem;
+    border-right: 1px solid #FFF4CC;
+    right: -1px;
+    bottom: .5rem;
+}
+.about p{
+    margin: 0 2rem;
+    text-align: right;
+}
+
+/* Footer styling*/
+footer {
+    background: linear-gradient(180deg, rgb(51, 51, 51) 0%, rgba(74, 74, 74, 0.651) 100%);
+    padding: 2rem;
+    position: relative;
+}
+footer p {
+    margin: 0 2rem ;
+}
+footer h2 {
+    padding: 1rem 1rem 0;
+    margin: 0 2rem 1rem;
+    position: relative;
+}
+footer h2::after {
+    content: "";
+    position: absolute;
+    height: 7rem;
+    border-left: 1px solid #FFF4CC;
+    left: -1px;
+    bottom: .5rem;
+}
+footer::after {
+    content: url(../images/pattern.png);
+    position: absolute;
+    opacity: 50%;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+}
+.contact a {
+    padding: 1rem;
+}
+.icon {
+    fill: white;
+    opacity: .7;
+    transition: .3s;
+}
+.icon:hover {
+    opacity: 1;
+}
+.overlay {
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+}
+.modal {
+    background-image: linear-gradient(0deg,rgb(51, 51, 51) 0%, rgba(74, 74, 74, 0) 100%);
+    margin: auto auto;
+    padding: 30px 20px;
+    position: relative;
+    width: 95%;
+    max-width: 1000px;
+}
+.modal-close {
+    cursor: pointer;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 10px;
+    bottom: -50px;
+}
+.hidden {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .main {
+        display: grid;
+        justify-content: center;
+        grid-gap: 1px 0;
+        grid-template-columns: repeat(2, minmax(300px, 500px));
+        grid-template-rows: repeat(6, .5fr);
+        margin: 0 auto;
+        padding: 1rem;
+        max-width: 1100px;
+        position: relative;
+        overflow: hidden;
+    }
+    nav {
+        align-self: end;
+        font-size: .9rem;
+    }
+    .intro p {
+        font-size: 1.4rem;
+    }
+    .intro {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        grid-template-rows: 5rem 3rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .hi {
+        align-self: end;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        font-size: 4rem;
+        justify-self: start;
+        align-self: start;
+        margin: 0;
+    }
+    .student {
+        grid-column: 1 / 3;
+        margin: .5rem 0;
+        text-align: end;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    .svg-down {
+        width: 100%;
+    }
+    #projects {
+        font-size: 3.5rem;
+        font-weight: 300;
+        align-self: center;
+        justify-self: center;
+        margin: 0;
+        padding: 2rem;
+        
+    }
+    .project {
+        max-width: 600px;
+        justify-self: center;
+        margin: 0;
+        padding: 2rem;
+    }
+    .p1 {
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        
+    }
+    .p2 {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        
+    }
+    .p3 {
+        grid-column-start: 1;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+    .p4 {
+        grid-column-start: 2;
+        grid-row-start: 4;
+        grid-row-end: 6;
+    }
+    .p5 {
+        grid-column-start: 1;
+        grid-row-start: 5;
+        grid-row-end: 7;
+    }
+    .about {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        background: #4A4A4A;
+        position: relative;
+        margin-right: 1rem;
+    }
+    .p1,
+    .p3,
+    .p5 {
+        padding-left: 1rem;
+    }
+    .p2,
+    .p4 {
+        padding-right: 1rem;
+    }
+    .about h2,
+    .about p {
+        text-align: left;
+    }
+    .about h2 {
+        margin-left: 1rem;
+        font-size: 1.8rem;
+    }
+    h4 {
+        font-size: 1.4rem;
+        margin-bottom: 0;
+    }
+    footer {
+        text-align: center;
+        overflow: hidden;
+    }
+    h2::after,
+    h3::after {
+        display: none;
+    }
+    main::after {
+        content: "";
+        position: absolute;
+        border-left: 1px solid #fff4ccd0;
+        left: 50%;
+        right: 50%;
+        top: 100vh;
+        height: 1200px;
+    }
+    .about::after {
+        content: "";
+        position: absolute;
+        border-left: 1px solid #fff4ccd0;
+        height: 500px;
+        bottom: 0;
+    }
+    .photo-link{
+        margin-top: .3rem;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .student {
+        grid-row-start: 2;
+    }
+    #projects {
+        font-size: 4rem;
+        padding: 2rem 4rem;
+        background: linear-gradient(25deg, rgb(68, 68, 68) 0%, rgb(68, 68, 68) 50%, rgb(60, 60, 60) 100%);
+    }
+    h4 {
+        font-size: 1.7rem;
+    }
+    .photo-link{
+        margin-top: .5rem;
+    }
+}
