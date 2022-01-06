@@ -166,7 +166,7 @@ h4 {
 /* Footer styling*/
 footer {
     background: linear-gradient(180deg, rgb(51, 51, 51) 0%, rgba(74, 74, 74, 0.651) 100%);
-    padding: 2rem;
+    padding: 2rem 0;
     position: relative;
 }
 footer p {
