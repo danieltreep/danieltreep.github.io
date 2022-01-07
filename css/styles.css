@@ -136,9 +136,14 @@ h4 {
     font-size: 1rem;
     color: #ffe0d2;
     font-weight: normal;
+    
+}
+h4,
+.modal h4 {
     flex-grow: 1;
 }
-.project a {
+.project a,
+.modal a {
     align-self: end;
 }
 .project p {
@@ -252,7 +257,8 @@ footer::after {
     display: none;
 }
 @media screen and (max-width: 359px) {
-    .project .icon {
+    .project .icon,
+    .modal .icon {
         display: none;
     }
 }
